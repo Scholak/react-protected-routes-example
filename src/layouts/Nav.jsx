@@ -12,6 +12,9 @@ const Nav = () => {
 					<NavLink to='/admin'>Admin</NavLink>
 				</li>
 				<li>
+					<NavLink to='/posts/edit/1'>Edit Post 1</NavLink>
+				</li>
+				<li>
 					<NavLink to='/login'>Login</NavLink>
 				</li>
 			</ul>

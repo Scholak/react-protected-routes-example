@@ -18,9 +18,9 @@ const Login = () => {
   }
 
   return (
-		<PublicLayout>
+		<>
 			<button onClick={handleLogin}>login</button>
-		</PublicLayout>
+		</>
 	)
 }
 

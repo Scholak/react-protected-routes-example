@@ -2,7 +2,6 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { logout } from '../slices/authSlice'
 import { useNavigate } from 'react-router-dom'
-import ProtectedLayout from '../layouts/ProtectedLayout'
 
 const Admin = () => {
 
@@ -16,10 +15,10 @@ const Admin = () => {
   }
 
   return (
-		<ProtectedLayout>
+		<>
 			<h1>admin</h1>
       <button onClick={handleLogout}>logout</button>
-		</ProtectedLayout>
+		</>
 	)
 }
 

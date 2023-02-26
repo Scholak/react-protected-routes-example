@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useSelector } from 'react-redux'
-import { Navigate } from 'react-router-dom'
+import { Navigate, Outlet } from 'react-router-dom'
 import Nav from './Nav'
 
 const animations = {
@@ -10,7 +10,7 @@ const animations = {
 	exit: { opacity: 0, x: -100 },
 }
 
-const ProtectedLayout = ({children}) => {
+const ProtectedLayout = () => {
   
   const { auth } = useSelector(state => state.auth)
 
@@ -27,7 +27,7 @@ const ProtectedLayout = ({children}) => {
 			transition={{ duration: .5 }}
 		>
 			<Nav />
-			{children}
+			<Outlet />
 		</motion.div>
 	)
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Outlet } from 'react-router-dom'
 import Nav from './Nav'
 
 const animations = {
@@ -8,7 +9,7 @@ const animations = {
   exit: { opacity: 0, x: -100 }
 }
 
-const PublicLayout = ({children}) => {
+const PublicLayout = () => {
   return (
 		<motion.div
 			variants={animations}
@@ -18,7 +19,7 @@ const PublicLayout = ({children}) => {
 			transition={{ duration: .5 }}
 		>
 			<Nav />
-			{children}
+			<Outlet />
 		</motion.div>
 	)
 }
